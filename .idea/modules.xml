@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/truelysell-android.iml" filepath="$PROJECT_DIR$/.idea/modules/truelysell-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CardForm/truelysell-android.CardForm.iml" filepath="$PROJECT_DIR$/.idea/modules/CardForm/truelysell-android.CardForm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/truelysell-android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/truelysell-android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/truelysell-android.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/truelysell-android.library.iml" />
+    </modules>
+  </component>
+</project>

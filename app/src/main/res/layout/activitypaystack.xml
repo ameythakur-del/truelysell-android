@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/ic_app_icon" />
+
+    <TextView
+        android:id="@+id/tvPayableAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_2sdp"
+        android:text="Payable Amount"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_3sdp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_1sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Total Amount"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/ic_price_tag"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="@dimen/_2sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxWidth="@dimen/_60sdp"
+            android:maxLines="1"
+            android:minWidth="@dimen/_30sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_9sdp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDebitCredit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:padding="@dimen/_2sdp"
+        android:text="Debit card / Credit card"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="visible" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <LinearLayout
+            android:id="@+id/ll_card_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/cet_enter_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bakground_rectangle_gray"
+                android:digits="01234 56789"
+                android:drawableEnd="@drawable/cardnumber"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="@string/txt_card_number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="23"
+                android:padding="@dimen/_10sdp"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cet_expiry_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bakground_rectangle_gray"
+                    android:drawableEnd="@drawable/expire_date"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="Expiry date"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:padding="@dimen/_10sdp"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/_10sdp" />
+
+                <EditText
+                    android:id="@+id/cet_cvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bakground_rectangle_gray"
+                    android:drawableEnd="@drawable/cvvicon"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="CVV"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:padding="@dimen/_10sdp"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/txt_card_secure"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btnPaynow"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@drawable/btn_bg_round_corner_green"
+        android:ems="10"
+        android:text="Pay Now"
+        android:textColor="@color/bt_white" />
+
+
+</LinearLayout>
